@@ -1,7 +1,3 @@
-body {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-}
 ul {
     list-style-type: none;
     margin: 0;
@@ -215,6 +211,7 @@ p {
     word-spacing: 0.5em;
     letter-spacing: 0.1em;
     font-family: "OpenSansCondensed-Light";
+    color: #769fc2;
 }
 a {
     line-height: 1.5em;
@@ -231,6 +228,11 @@ a::after {
     padding: 5px;
     font-size: 1.6rem;
     transform: rotate(-90deg);
+}
+button{
+    font-size: 25px;
+    display: inline-block;
+    color: #5496ca;
 }
 .text {
     font-size: 2.5rem;
