@@ -176,7 +176,7 @@ label[for="ham-menu"] {
     margin: 4px 0 4px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(84 150 202);
     transition: 500ms;
     transform-origin: right center;
 }
