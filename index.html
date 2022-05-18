@@ -5,14 +5,45 @@
     <meta http-equiv="X-UA Compatible" content="IE=edge" />
     <title>cyber fairy</title>
     <link rel="icon" type="image/png" href="/pixie4.png" />
-    <style>
-        h3 {
-            display: inline-block;
-            color: #5496ca;
-        }
-    </style>
     <link rel="stylesheet" href="./matcha.css" />
     <script src="/matcha.js"></script>
+    <style>
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            background-color: transparent;
+        }
+        
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: transparent;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 25px;
+            font-weight: 800;
+        }
+        
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            color: #ddd;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            text-align: center;
+            position: absolute;
+            margin-top: 20%;
+            width: 100%;
+            height: 80%;
+            font-family: "OpenSansCondensed-Light";
+        }
+        </style>
 </head>
 
 <body style="background: rgb(213,157,132); background: linear-gradient(0deg, rgba(213,157,132,1) 18%, rgba(154,190,218,1) 79%)">
@@ -31,12 +62,43 @@
         </div>
     </div>
     <div id="main-containor">
-        <div class="content" style="font-family:futura-pt-bold,sans-serif; display: inline">
-            <h3 style="margin-left: 50%; margin-top:7%">about me </h3>
-            <h3 style="margin-left: 5%">projects </h3>
-            <h3 style="margin-left: 5%">art</h3>
-            <h3 style="margin-left: 5%">contact</h3>
+        <div class="tab" style="font-family:futura-pt-bold,sans-serif; display: inline">
+            <button style="margin-left: 45%; margin-top:7%" class="tablinks" onclick="openContent(event, 'aboutMe')">about me</button>
+            <button style="margin-left: 5%; margin-top:7%" class="tablinks" onclick="openContent(event, 'projects')">projects</button>
+            <button style="margin-left: 5%; margin-top:7%" class="tablinks" onclick="openContent(event, 'art')">art</button>
+            <button style="margin-left: 5%; margin-top:7%" class="tablinks" onclick="openContent(event, 'contact')">contact</button>
         </div>
+        <div id="aboutMe" class="tabcontent">
+            <p> I'm Areej.</p>
+        </div>
+          
+          <div id="projects" class="tabcontent">
+            <p>Future projects will be here.</p>
+        </div>
+          
+        <div id="art" class="tabcontent">
+            <p>random page for any art projects i want to share :)</p>
+        </div>
+
+        <div id="contact" class="tabcontent">
+            <p>email me at areej_irfan@hotmail.com</p>
+        </div>
+          
+        <script>
+            function openContent(evt, contentName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(contentName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
     </div>
 </body>
 
